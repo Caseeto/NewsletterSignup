@@ -4,7 +4,7 @@ const request = require('request');
 const https = require('https');
 const app = express();
 require('dotenv').config();
-//const API_key = process.env.API_KEY;
+const API_key = process.env.API_KEY;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -37,7 +37,7 @@ app.post("/", function(req, res) {
 
   const options = {
     method: "POST",
-    auth: "ashishsaranshi:" + API_KEY
+    auth: "ashishsaranshi:" + API_key
   }
 
   const request = https.request(url, options, function(response) {
