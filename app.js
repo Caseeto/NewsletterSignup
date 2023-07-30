@@ -65,7 +65,4 @@ app.listen(process.env.PORT || 3000, function(req, res) {
   console.log("Server is running on port 3000!!");
 });
 
-
-
-
 //URL https://us17.api.mailchimp.com/3.0/lists/{listid}
